@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F23FF392957AB6500D4DB2E /* PersonalInformationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23FF382957AB6500D4DB2E /* PersonalInformationForm.swift */; };
-		0F23FF3B2957AB7600D4DB2E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23FF3A2957AB7600D4DB2E /* Person.swift */; };
+		0F23FF3D2957B88000D4DB2E /* PersonalInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23FF3C2957B88000D4DB2E /* PersonalInformationView.swift */; };
+		0F23FF3F2957B8BB00D4DB2E /* Person1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F23FF3E2957B8BB00D4DB2E /* Person1.swift */; };
 		0F888B152957A6C900BFD2AA /* HikeAlertGitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F888B142957A6C900BFD2AA /* HikeAlertGitHubApp.swift */; };
 		0F888B172957A6C900BFD2AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F888B162957A6C900BFD2AA /* ContentView.swift */; };
 		0F888B192957A6CA00BFD2AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F888B182957A6CA00BFD2AA /* Assets.xcassets */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F23FF382957AB6500D4DB2E /* PersonalInformationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationForm.swift; sourceTree = "<group>"; };
-		0F23FF3A2957AB7600D4DB2E /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0F23FF3C2957B88000D4DB2E /* PersonalInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationView.swift; sourceTree = "<group>"; };
+		0F23FF3E2957B8BB00D4DB2E /* Person1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person1.swift; sourceTree = "<group>"; };
 		0F888B112957A6C900BFD2AA /* HikeAlertGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HikeAlertGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F888B142957A6C900BFD2AA /* HikeAlertGitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeAlertGitHubApp.swift; sourceTree = "<group>"; };
 		0F888B162957A6C900BFD2AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,8 +61,8 @@
 			children = (
 				0F888B142957A6C900BFD2AA /* HikeAlertGitHubApp.swift */,
 				0F888B162957A6C900BFD2AA /* ContentView.swift */,
-				0F23FF382957AB6500D4DB2E /* PersonalInformationForm.swift */,
-				0F23FF3A2957AB7600D4DB2E /* Person.swift */,
+				0F23FF3C2957B88000D4DB2E /* PersonalInformationView.swift */,
+				0F23FF3E2957B8BB00D4DB2E /* Person1.swift */,
 				0F888B182957A6CA00BFD2AA /* Assets.xcassets */,
 				0F888B1D2957A6CA00BFD2AA /* Persistence.swift */,
 				0F888B1F2957A6CA00BFD2AA /* HikeAlertGitHub.xcdatamodeld */,
@@ -149,12 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F23FF3B2957AB7600D4DB2E /* Person.swift in Sources */,
+				0F23FF3F2957B8BB00D4DB2E /* Person1.swift in Sources */,
 				0F888B212957A6CA00BFD2AA /* HikeAlertGitHub.xcdatamodeld in Sources */,
 				0F888B1E2957A6CA00BFD2AA /* Persistence.swift in Sources */,
 				0F888B172957A6C900BFD2AA /* ContentView.swift in Sources */,
+				0F23FF3D2957B88000D4DB2E /* PersonalInformationView.swift in Sources */,
 				0F888B152957A6C900BFD2AA /* HikeAlertGitHubApp.swift in Sources */,
-				0F23FF392957AB6500D4DB2E /* PersonalInformationForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
