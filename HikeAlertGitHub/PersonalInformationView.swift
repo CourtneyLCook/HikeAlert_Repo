@@ -30,10 +30,10 @@ struct PersonalInfoView: View {
     
     
     //@State var name: String = UserDefaults.standard.string(forKey: "nameKey") ?? ""
-   // @State var birth: String = UserDefaults.standard.string(forKey: "birthKey") ?? ""
-    // @State var home: String = UserDefaults.standard.string(forKey: "homeKey") ?? ""
-  //  @State var phone: String = UserDefaults.standard.string(forKey: "phoneKey") ?? ""
-  //  @State var email: String = UserDefaults.standard.string(forKey: "emailKey") ?? ""
+    //@State var birth: String = UserDefaults.standard.string(forKey: "birthKey") ?? ""
+    //@State var home: String = UserDefaults.standard.string(forKey: "homeKey") ?? ""
+    //@State var phone: String = UserDefaults.standard.string(forKey: "phoneKey") ?? ""
+    //@State var email: String = UserDefaults.standard.string(forKey: "emailKey") ?? ""
     
     @State var inputname: String = ""
     @State var inputbirth: String = ""
@@ -42,10 +42,10 @@ struct PersonalInfoView: View {
     @State var inputemail: String = ""
     // @State private var selection = ""
     
-//    let states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+    //    let states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
     var body: some View {
         ZStack {
-            Color(.green)
+            //  Color(.green)
             NavigationView {
                 Form {
                     Group {
@@ -55,98 +55,186 @@ struct PersonalInfoView: View {
                                     self.inputname = self.person.name
                                 }
                             }
-                        }
-//                        Group {
-//                                NavigationLink("Description", destination: DescriptionView())
-//                                    .foregroundColor(.black)
-//                        }
-                        Group {
-                            Section(header: Text("Date of Birth")) {
-                                HStack {
-                                    TextField("MM/DD/YYYY", text: $inputbirth).onAppear() {
-                                        self.inputbirth = self.person.birth
-                                    }
+                        } // Section
+                    } // Group
+                    Group {
+                        NavigationLink("Description", destination: DescriptionView())
+                            .foregroundColor(.black)
+                    } // Group
+                    Group {
+                        Section(header: Text("Date of Birth")) {
+                            HStack {
+                                TextField("MM/DD/YYYY", text: $inputbirth).onAppear() {
+                                    self.inputbirth = self.person.birth
                                 }
                             }
                         }
-//                        Group {
-//                            Section(header: Text("Residence")) {
-//                                HStack {
-//                                    TextField("Hometown", text: $inputhome)
-//                                    Text(home)
-//                                }
-                                
-//                                Picker("State", selection: $selection){
-//                                    ForEach(states, id: \.self) {
-//                                        Text($0)
-//
-//                                    }
-//                                }
-//                                .pickerStyle(.menu)
-//                            }
- //                       }
-                        Group {
-                            Section(header: Text("Contact Information")) {
-                                HStack {
-                                    TextField("Phone Number", text: $inputphone).onAppear() {
-                                        self.inputphone = self.person.phone
-                                    }
+                    } // Group
+                    Group {
+                        Section(header: Text("Residence")) {
+                            HStack {
+                                TextField("Hometown", text: $inputhome).onAppear() {
+                                    self.inputhome = self.person.home
                                 }
-                                HStack {
-                                    TextField("Email", text: $inputemail).onAppear() {
-                                        self.inputemail = self.person.email
-                                    }
-                                }
-                                
+    
+                            }
+                            /*
+                             Picker("State", selection: $selection){
+                             ForEach(states, id: \.self) {
+                             Text($0)
+    
+                             }
+                             .pickerStyle(.menu)
+                             }
+                             */
+                        }
+                    } // Group
+                    Group {
+                        Section(header: Text("Contact Information")) {
+    
+                            TextField("Phone Number", text: $inputphone).onAppear() {
+                                self.inputphone = self.person.phone
+                            }
+                            TextField("Email", text: $inputemail).onAppear() {
+                                self.inputemail = self.person.email
                             }
                         }
-                        Group {
-                            NavigationLink("Medical Information", destination: Medical())
-                                .foregroundColor(.black)
-                        }
-                        Group {
-                            NavigationLink("Emergency Contacts", destination: EmergencyContact())
-                                .foregroundColor(.black)
-                        }
-                        Group {
-                            NavigationLink("View As", destination: ViewAs())
-                                .foregroundColor(.black)
-                        }
-                    }
-                    NavigationLink("Save Data", destination: ContentView()) {
-                        
-                    
-                        Button(action: {
-                            UserDefaults.standard.set(inputname, forKey: "nameKey")
-                            // name = inputname
-                            print("Saved value: \(inputname)")
-                            
-                            UserDefaults.standard.set(inputbirth, forKey: "birthKey")
-                            print("Saved value: \(inputbirth)")
-                            
-                            // UserDefaults.standard.set(inputhome, forKey: "homeKey")
-                            // home = inputhome
-                            // print("Saved value: \(inputhome)")
-                            
-                            UserDefaults.standard.set(inputphone, forKey: "phoneKey")
-                            print("Saved value: \(inputphone)")
-                            
-                            UserDefaults.standard.set(inputemail, forKey: "emailKey")
-                            print("Saved value: \(inputemail)")
-                        }) {
-                            // button appearance
-                        }
-                    }
-                    
-                }
+                    } // Group
+  
+                } // Form
                 .navigationBarTitle("Personal Information")
                 //.navigationBarTitleDisplayMode(.inline)
                 
-                
-            }
-        }
-    }
+            } // NavigationView
+        } // ZStack
+    } // body
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+//var body: some View {
+//    ZStack {
+//        //  Color(.green)
+//        NavigationView {
+//            Form {
+//                Group {
+//                    Section(header: Text("Name")) {
+//                        HStack {
+//                            TextField("Full Name", text: $inputname).onAppear() {
+//                                self.inputname = self.person.name
+//                            }
+//                        }
+//                    }
+//                }
+//                Group {
+//                    NavigationLink("Description", destination: DescriptionView())
+//                        .foregroundColor(.black)
+//                }
+//                Group {
+//                    Section(header: Text("Date of Birth")) {
+//                        HStack {
+//                            TextField("MM/DD/YYYY", text: $inputbirth).onAppear() {
+//                                self.inputbirth = self.person.birth
+//                            }
+//                        }
+//                    }
+//                }
+//
+//                Group {
+//                    Section(header: Text("Residence")) {
+//                        HStack {
+//                            TextField("Hometown", text: $inputhome).onAppear() {
+//                                self.inputhome = self.person.home
+//                            }
+//
+//                        }
+//                        /*
+//                         Picker("State", selection: $selection){
+//                         ForEach(states, id: \.self) {
+//                         Text($0)
+//
+//                         }
+//                         .pickerStyle(.menu)
+//                         }
+//                         */
+//                    }
+//                }
+//
+//                Group {
+//                    Section(header: Text("Contact Information")) {
+//
+//                        TextField("Phone Number", text: $inputphone).onAppear() {
+//                            self.inputphone = self.person.phone
+//                        }
+//                        TextField("Email", text: $inputemail).onAppear() {
+//                            self.inputemail = self.person.email
+//                        }
+//                    }
+//                }
+//                /* Group {
+//                 NavigationLink("Medical Information", destination: Medical())
+//                 .foregroundColor(.black)
+//                 }
+//                 Group {
+//                 NavigationLink("Emergency Contacts", destination: EmergencyContact())
+//                 .foregroundColor(.black)
+//                 }
+//                 Group {
+//                 NavigationLink("View As", destination: ViewAs())
+//                 .foregroundColor(.black)
+//                 }
+//                 */
+//                NavigationLink("Save Data", destination: ContentView()) {
+//
+//
+//                    Button(action: {
+//                        UserDefaults.standard.set(inputname, forKey: "nameKey")
+//                        // name = inputname
+//                        print("Saved value: \(inputname)")
+//
+//                        UserDefaults.standard.set(inputbirth, forKey: "birthKey")
+//                        print("Saved value: \(inputbirth)")
+//
+//                        // UserDefaults.standard.set(inputhome, forKey: "homeKey")
+//                        // home = inputhome
+//                        // print("Saved value: \(inputhome)")
+//
+//                        UserDefaults.standard.set(inputphone, forKey: "phoneKey")
+//                        print("Saved value: \(inputphone)")
+//
+//                        UserDefaults.standard.set(inputemail, forKey: "emailKey")
+//                        print("Saved value: \(inputemail)")
+//                    })
+//                    {
+//                        // button appearance
+//                    }
+//                }
+//
+//            }
+//            .navigationBarTitle("Personal Information")
+//            //.navigationBarTitleDisplayMode(.inline)
+//
+//        }
+//    }
+//}
+
+
+
+
+
+
+
+    
+
     
     struct dummyName: View {
         @State var dummy: String = UserDefaults.standard.string(forKey: "dummyKey") ?? ""
